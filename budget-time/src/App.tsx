@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
 import { Bill } from './types';
 import IncomeInput from './components/IncomeInput';
 import BillForm from './components/BillForm';
@@ -17,7 +16,7 @@ function App() {
   const remaining = income - totalBills;
 
   return (
-     <div style={{ padding: "1rem" }}>
+    <div className="min-h-screen bg-gray-100 p-6">
       <h1>Monthly Budget Calendar</h1>
       <IncomeInput income={income} setIncome={setIncome} />
       <BillForm onAddBill={addBill} />
